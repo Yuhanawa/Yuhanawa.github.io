@@ -1,0 +1,1 @@
+(function(t,e){for(const o of e.querySelectorAll("img[lazyload]")){Fluid.utils.waitElementVisible(o,function(){o.removeAttribute("srcset");o.removeAttribute("lazyload")},CONFIG.lazyload.offset_factor)}})(window,document);
