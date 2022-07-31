@@ -1,0 +1,9 @@
+const files=[];document.addEventListener("DOMContentLoaded",function(){let t=document.getElementById("full");let e=document.getElementById("full-tip-word");window.onscroll=function(){t.style.top=window.scrollY+"px"};function n(e){if(e){document.body.style.filter="blur(0.8px)";t.style.display="block"}else{document.body.style.filter="";t.style.display="none"}}document.addEventListener("dragenter",function(e){n(true);e.stopPropagation();e.preventDefault()},false);t.addEventListener("dragleave",function(e){n(false);e.stopPropagation();e.preventDefault()},false);t.addEventListener("dragover",function(e){e.stopPropagation();e.preventDefault()},false);t.addEventListener("drop",function(t){n(false);t.stopPropagation();t.preventDefault();console.log(t.dataTransfer.files);for(let e=0;e<t.dataTransfer.files.length;e++){if(t.dataTransfer.files[e].type.indexOf("image")===0){fileHandler(t.dataTransfer.files[e])}}console.log(files)},false);document.getElementById("filePicker").onchange=function(e){}});function filehandler(e){console.log(e);files.push(e);document.getelementbyid("img-list").innerhtml+="`<div" class="img-item" id="img${files.length}">
+            <img src="/tools/imgmin/index.j/${URL.createObjectURL(e)}" alt="${e.name}" draggable="false">
+            <div class="img-item-tip">
+                <div class="img-item-tip-word">${e.name}</div>
+                <div class="img-item-tip-btn">
+                    <button class="img-item-tip-btn-del">删除</button>
+                </div>
+            </div>
+        `}</t.dataTransfer.files.length;e++){if(t.dataTransfer.files[e].type.indexOf("image")===0){fileHandler(t.dataTransfer.files[e])}}console.log(files)},false);document.getElementById("filePicker").onchange=function(e){}});function>
