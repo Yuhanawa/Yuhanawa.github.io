@@ -11,7 +11,7 @@
 
     <h1 id="title">检测你对 XXX 的好感度</h1>
     <hr>
-    <h2 style="text-align:center;" id="question-number">Question 1 of 70</h2>
+    <h2 style="text-align:center;" id="question-number">Question 1 of 0</h2>
     <p class="question" id="question-text"></p>
 
     <div id="question-button">
@@ -27,6 +27,8 @@
 
     <script type="text/javascript">
         document.getElementById("question-text").innerHTML = questions[0];
+        document.getElementById("question-number").innerHTML = "Question " + (pos+1) + " of " + questions.length;
+
         if (master.length>8) document.getElementById("title").innerHTML = "检测你对 <br/>"+master+"<br/> 的好感度";
         else  document.getElementById("title").innerHTML = "检测你对 "+master+" 的好感度";
     </script>
