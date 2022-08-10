@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <title>favorability test</title>
+    <meta charset="utf-8">
+
+<body>
+
+    <script type="application/javascript" src="index.js"></script>
+
+    <h1 id="title">检测你对 XXX 的好感度</h1>
+    <hr>
+    <h2 style="text-align:center;" id="question-number">Question 1 of 70</h2>
+    <p class="question" id="question-text"></p>
+
+    <div id="question-button">
+        <button class="button stronglyAgree" onclick="next_question(10)"> 强烈赞同 </button> <br>
+        <button class="button agree" onclick="next_question(5)"> 赞同 </button> <br>
+        <button class="button neutral" onclick="next_question(0)"> 中立/不确定 </button> <br>
+        <button class="button disagree" onclick="next_question(-5)"> 反对 </button> <br>
+        <button class="button stronglyDisagree" onclick="next_question(-10)"> 强烈反对 </button> <br>
+        <button class="small_button" onclick="prev_question()" id="back_button">Back</button>
+<!--        <button class="small_button_off" id="back_button_off" style="display: block;">Back</button><br>-->
+    </div>
+
+
+    <script type="text/javascript">
+        document.getElementById("question-text").innerHTML = questions[0];
+        if (master.length>8) document.getElementById("title").innerHTML = "检测你对 <br/>"+master+"<br/> 的好感度";
+        else  document.getElementById("title").innerHTML = "检测你对 "+master+" 的好感度";
+    </script>
+
+</body>
+
+</html>
