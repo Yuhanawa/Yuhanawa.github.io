@@ -23,8 +23,8 @@ function next_question(i) {
     pos++;
 
     if (pos >= questions.length) {
-        document.getElementById("question-text").innerHTML = "Your score is " + get_score();
-        document.getElementById("question-number").innerHTML = "";
+        document.getElementById("question-text").innerHTML = get_score_love();
+        document.getElementById("question-number").innerHTML = "Your score is " + get_score();
         document.getElementById("question-button").innerHTML = "";
         document.getElementById("question-button").style.display = "none";
     } else {
@@ -35,6 +35,18 @@ function next_question(i) {
 
 function get_score() {
     return OriginalScore/ (questions.length * 10) * 100 ;
+}
+function get_score_love() {
+    let love = "";
+    for (let i = 0; i < Math.abs(get_score()); i++) {
+        love += "❤"
+    }
+
+    if (get_score() > 0) {
+        return "<p style='color: red'> " + love +"</p>";
+    } else {
+        return "<p style='color: black'> " + love +"</p>";
+    }
 }
 
 function prev_question() {
