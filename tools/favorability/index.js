@@ -66,7 +66,7 @@ function next_question(i) {
 
     if (pos >= questions.length) {
         document.getElementById("question-area").innerHTML = `
-            <h1 style="background: rgba(255,182,193,0.6);color: #84e57c" xmlns="http://www.w3.org/1999/html">
+            <h1 style="background: rgba(255,182,193,0.6);color: rgba(47,34,35,0.6)" xmlns="http://www.w3.org/1999/html">
             <p>${get_comment()}</p>
             <br>
             你对${master}的好感度是${get_like()}
