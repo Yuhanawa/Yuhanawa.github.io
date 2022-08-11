@@ -43,17 +43,20 @@ function next_question(i) {
 }
 
 function get_score() {
-    return OriginalScore/ (questions.length * 10) * 100 ;
+    return (OriginalScore/ (questions.length * 10) * 100).toFixed(1) ;
 }
 function get_score_love() {
     let love = "";
-    for (let i = 0; i < Math.abs(get_score()); i++) {
-        love += "❤"
-    }
 
     if (get_score() > 0) {
+        for (let i = 0; i < Math.abs(get_score()); i++) {
+            love += "❤"
+        }
         return "<p style='color: red'> " + love +"</p>";
     } else {
+        for (let i = 0; i < Math.abs(get_score()); i++) {
+            love += "💔"
+        }
         return "<p style='color: black'> " + love +"</p>";
     }
 }
