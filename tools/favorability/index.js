@@ -20,9 +20,9 @@ questions = [{
 }, {
     ctx: "你愿意拯救%", like: 5, loyal: 5, ctrl: -3,
 }, {
-    ctx: "你原为%献上生命", like: 5, loyal: 10, ctrl: -10,
+    ctx: "你愿意为了%献上生命", like: 5, loyal: 10, ctrl: -10,
 }, {
-    ctx: "你原为%献上父母", like: 3, loyal: 15, ctrl: -10,
+    ctx: "你愿意为了%献上父母", like: 3, loyal: 15, ctrl: -10,
 }, {
     ctx: "你愿舔%的脚丫", like: 3, loyal: 10, ctrl: -10,
 }, {
@@ -71,7 +71,7 @@ function next_question(i) {
             <br>
             你对${master}的好感度是${get_like()}
             <br>
-            你对${master}的忠诚都是${get_loyal()}
+            你对${master}的忠诚度是${get_loyal()}
             <br>
             你对${master}的控制欲是${get_ctrl()}
             <br>
