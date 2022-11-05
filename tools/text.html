@@ -18,7 +18,7 @@
 
     if (window.location.href.startsWith("http://127.0.0.1:5500/source/tools/text.html"))
     {u="/source/tools/text.html?"}
-    else {u="/tools/text/?"}
+    else {u="/tools/text?"}
     update=()=>{
         
         window.history.pushState({}, null, `${u}t=${document.getElementById("textinput").value}`);
