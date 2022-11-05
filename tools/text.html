@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text</title>
+</head>
+<script>
+    get = (name)=> {
+    let reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+    let r = window.location.search.substr(1).match(reg);
+    if (r != null) {
+        return decodeURIComponent(r[2]);
+    };
+    return null;
+ }
+
+    if (window.location.href.startsWith("http://127.0.0.1:5500/source/tools/text.html"))
+    {u="/source/tools/text.html?"}
+    else {u="/tools/text/?"}
+    update=()=>{
+        
+        window.history.pushState({}, null, `${u}t=${document.getElementById("textinput").value}`);
+    }
+
+    document.addEventListener("DOMContentLoaded",()=>{
+
+        if(get("t")==null){
+            document.body.innerHTML = `
+                <input id="textinput" type="text" onchange="update()">
+            `
+        }else{
+            function getsize() {
+                if (get('size')!=null)
+                    return get('size')+"px";
+                if (get("t").length<=4)
+                 return 260
+                else if(get("t").length<=10)
+                 return 220
+                else if(get("t").length<=18)
+                 return 140
+                else if(get("t").length<=54)
+                 return 100     
+                else if(get("t").length<=140)
+                 return 60
+                else if(get("t").length<=280)
+                 return 36                 
+            }
+            document.body.innerHTML = `
+                <div class="text" style="font-size:${getsize()}px;background-color: ${get("bg")};color:${get("c")}">${get("t")}</div>
+            `            
+        }
+    })
+
+
+</script>
+<style>
+    .text{
+        text-align: center;
+        font-size: xx-large;
+        margin: auto;
+        vertical-align: middle;
+        text-align: center;
+        width: 80%;
+        height: auto;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        padding-bottom: 86px;
+        word-break: break-word;
+    }
+</style>
+<body>
+    
+</body>
+</html>
