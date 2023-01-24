@@ -1,0 +1,19 @@
+User-agent: *
+
+Allow: /
+Allow: /archives/
+Allow: /categories/
+Allow: /tags/
+Allow: /about/
+Allow: /links/
+Allow: /posts/
+Allow: /posts/*/
+Allow: /posts/*/*/
+
+Disallow: /css/
+Disallow: /js/
+Disallow: /fonts/
+Disallow: /img/
+Disallow: /tools/
+
+Sitemap: https://yuhanawa.github.io/sitemap.xml
