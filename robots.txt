@@ -7,13 +7,11 @@ Allow: /tags/
 Allow: /about/
 Allow: /links/
 Allow: /posts/
-Allow: /posts/*/
-Allow: /posts/*/*/
+Allow: /css/
+Allow: /img/
 
-Disallow: /css/
 Disallow: /js/
 Disallow: /fonts/
-Disallow: /img/
 Disallow: /tools/
 
 Sitemap: https://yuhanawa.github.io/sitemap.xml
