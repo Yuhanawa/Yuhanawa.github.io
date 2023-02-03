@@ -1,68 +1,28 @@
 <!DOCTYPE html>
 
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>高中 高考 选课 分班 志愿 工具 数据分析 可视化</title>
-    <meta name="description" content="通过公开的选课专业数据可视化制图">
+    <title>高中 高考 选科 分班 志愿 工具 数据分析 可视化</title>
+    <meta name="description" content="通过公开的选科专业数据可视化制图">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link crossorigin="anonymous" integrity="sha384-NlcBaUh09hbP/p003iXDyFjqPoaTwSlkiJtX9SxyILPGe946K42yf3OPMg7h0QXa"
-          href="https://lib.baomitu.com/tailwindcss/0.7.4/tailwind.min.css" rel="stylesheet">
+        href="https://lib.baomitu.com/tailwindcss/0.7.4/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="">
-</head>
-<body class="self-center items-center text-center
-     bg-grey-light bg-center m-auto" style="padding: 8px; max-width: 100vmin;">
-<div style="null:null" class="m-auto">
-
-
-    <p> 一个通过模拟选科查看自己可以报那些专业的可视化工具 以及 高效的学校,专业,科目要求检索工具(那破网站太烂了) </p>
-    <p>大饼画完了, 放两张可视化图</p>
-    <img src="/tools/img/选科数据分析表.png">
-    <img src="/tools/img/柱状图.png">
-    <h1>Work-In-Progress</h1>
-    <h2>施工中.....</h2>
-    <h2>无限期拖延中.....</h2>
-    <br> <br> <br>
-    <div class="border-b-2 shadow-lg bg-white p-8 pt-4">
-        <h2>选课 </h2>
-        <br>
-        <div style="display: block" class="font-bold">
-            <div id="wl-in" class="xk-in">物理</div>
-            <div id="hx-in" class="xk-in">化学</div>
-            <div id="sw-in" class="xk-in">生物</div>
-            <br>
-            <div id="zz-in" class="xk-in">政治</div>
-            <div id="ls-in" class="xk-in">历史</div>
-            <div id="dl-in" class="xk-in">地理</div>
-        </div>
-        <br>
-        <br>
-        <h2>概要 </h2>
-        <br>
-        <div style="display: block; font-size: larger;" class="font-bold">
-            可选专业数: <strong>0000</strong> + 1286(不限)
-            <br>
-            可选的(学校)专业数: <strong>0000</strong> + 17034(不限)
-            <br>
-            恭喜您超过全国 <strong>00.0%</strong> 的考生
-        </div>
-
-            <br>
-    </div>
-    <br> <br> <br>
-
-
-    <script src="index.js"></script>
-
     <style>
-        p, h1, h2 {
+        p,
+        h1,
+        h2 {
             text-align: center;
         }
-        strong{
-            font-size: xx-large; 
+
+        strong {
+            font-size: xx-large;
             color: rgb(189, 82, 82)
         }
+
         .xk-in {
             width: 25%;
             background-color: rgb(221, 220, 220);
@@ -70,8 +30,8 @@
             margin: 10px;
             padding: 20px;
             box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.2),
-            0 5px 15px 0 rgb(0 0 0 / 8%),
-            inset 15px 0 4px 8px rgb(0 0 0 / 2%);
+                0 5px 15px 0 rgb(0 0 0 / 8%),
+                inset 15px 0 4px 8px rgb(0 0 0 / 2%);
             border-radius: 12px;
             cursor: pointer;
         }
@@ -79,18 +39,180 @@
         .xk-in-on {
             background-color: rgb(241, 167, 167);
             box-shadow: 2px 15px 30px 0 rgba(255, 129, 223, 0.4),
-            0 5px 15px 0 rgba(255, 129, 223, 0.4),
-            inset 2px 0 6px 6px rgba(213, 178, 178, 0.08);
+                0 5px 15px 0 rgba(255, 129, 223, 0.4),
+                inset 2px 0 6px 6px rgba(213, 178, 178, 0.08);
+        }
+
+        .zyli {
+            padding: 6px 6px 8px 6px;
+            text-align: left;
+            /*width: 200px;*/
+            /*height:200px;*/
+            border: 0px solid rgba(160, 153, 153, 0.4);
+            border-bottom-width: 1px;
+            margin: 6px 8px 6px -32px;
+            white-space: nowrap;
+        }
+
+        .zyli:hover {
+            border-color: rgba(160, 153, 153);
         }
 
         img {
             width: 100%;
-            width: -webkit-fill-available;
+            margin: 0;
+            padding: 0;
         }
 
-        * {
-            /* margin: auto; */
+        li::marker {
+            content: ' ';
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .switch input {
+            display: none;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 6px;
+            left: 0;
+            right: 0;
+            bottom: -6px;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+            border-radius: 8px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: " 关闭 > ";
+            left: 5px;
+            top: 4px;
+            bottom: 4px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+            box-shadow: 2px 2px rgba(0, 0, 0, 0.02);
+            border: #1a1a1a 1px;
+            color: rgba(26, 26, 26, 0.75);
+            font-size: 14px;
+            padding: 0 4px;
+            border-radius: 6px;
+        }
+
+        input:checked+.slider {
+            background-color: rgba(241, 167, 167, 0.95);
+        }
+
+        input:focus+.slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+
+        input:checked+.slider:before {
+            content: "  < 开启 ";
+            background-color: rgb(167, 242, 205);
+            transform: translateX(120px);
         }
     </style>
+
+</head>
+
+<body class="self-center items-center text-center
+     bg-grey-light bg-center m-auto" style="padding: 8px; max-width: 100vmin;">
+    <div class="m-auto">
+
+        <img src="/tools/img/选科数据分析表.png">
+        <img src="/tools/img/柱状图.png">
+
+        <h2 class="m-4"> 上滑查看可视图片 </h2>
+        <h2 class="m-4"> 下滑进行模拟选科 </h2>
+
+        <div class="border-b-2 shadow-lg bg-white p-8 pt-4">
+            <h2>选科 </h2>
+            <br>
+            <div style="display: block" class="font-bold">
+                <div id="wl-in" class="xk-in">物理</div>
+                <div id="hx-in" class="xk-in">化学</div>
+                <div id="sw-in" class="xk-in">生物</div>
+                <br>
+                <div id="zz-in" class="xk-in">政治</div>
+                <div id="ls-in" class="xk-in">历史</div>
+                <div id="dl-in" class="xk-in">地理</div>
+            </div>
+            <br>
+            <br>
+            <h2>概要 </h2>
+            <br>
+            <div style="display: block; font-size: larger;" class="font-bold">
+                可选专业数: <strong id="zysum">0000</strong> + 1286(不限)
+                <br>
+                可选的(学校)专业数: <strong id="xxzysum">0000</strong> + 17034(不限)
+                <br>
+                恭喜您超过全国 <strong id="percent">00.0%</strong> 的数量
+            </div>
+            <br class="m-6">
+            <div>
+                <h2>以下是您可以报考的专业及学校</h2>
+                <label class="opacity-25">为防止卡顿最大显示250项,详情请使用筛选功能</label>
+                <br>
+                <label>隐藏不限科的专业及大学: </label>
+                <label class="switch"
+                    style="width: 180px;height: 26px; margin-top: 6px; margin-left: 6px;margin-right: 6px">
+                    <input id="hidden_in" type="checkbox" checked oninput="zys_filter()">
+                    <div class="slider"></div>
+                </label>
+                <br>
+                <label>
+                    输入大学或专业进行筛选:
+                    <input id="zys_filter_input" class="border-2 m-2" oninput="zys_filter(this.value)">
+                </label>
+                <br>
+
+                <ul id="zys" class="text-left border-2"
+                    style="max-width: 410px; margin: 10px auto auto;overflow: hidden"></ul>
+
+            </div>
+            <br>
+        </div>
+        <br><br><br>
+        <p>
+            小记:<br>
+            审美水平一半, 已经尽量把网页做的不那么难看了(至少比某教育局网站漂亮)<br>
+            百分比仅供参考: 因为只要选了物理化学都在百分之51左右 不选物理化学最高也到不了9%
+            物理化学对其他选择降维打击, 事实上相比物化政 物化生才是最优组合 <br>
+            相比物生政 化生地才是最烂组合 仅有59+1286(不限)中专业可选 <br>
+            搜索支持模糊搜索,支持空格加大模糊范围(例如:山大=>山东大学)<br>
+            不过因为没有权重的机制 山西大学排在山东大学之上 <br>
+            做了一定的放卡顿机制,如最大显示250项<br>
+            如果不限制在选科时会卡顿2秒,影响体验<br>
+        </p>
+
+        <br>
+        下面是以前画的大饼, 一天画饼,一天代码就基本完成了 <br>
+        选科可视化, 数据检索功能还没做, 不过感觉可视化没必要了,百分比就挺有参考性的,检索挺简单的,就是我也挺懒的
+        <br>
+        <br>
+
+        <p> 一个通过模拟选科查看自己可以报那些专业的可视化工具 以及 高效的学校,专业,科目要求检索工具(那破网站太烂了) </p>
+        <p>大饼画完了, 放两张可视化图</p>
+        <h1>Work-In-Progress</h1>
+        <h2>更多内容正在施工中</h2>
+        <h2>无限期拖延中...</h2>
+        <br> <br> <br>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="index.js"></script>
+
 </body>
+
 </html>
