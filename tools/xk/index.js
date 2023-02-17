@@ -1,6 +1,3 @@
-window.scrollTo(0,710);
-
-
 const xk_ins = document.getElementsByClassName("xk-in");
 const zysum = document.getElementById("zysum");
 const xxzysum = document.getElementById("xxzysum");
@@ -76,16 +73,18 @@ const summary = () => {
 
 let zys_filter_input = document.getElementById("zys_filter_input").value;
 zys_filter = (input)=>{
+    var max = 320;
     if (input !== undefined){
         zys_filter_input = input.trim();
     }
-    let reg = RegExp(zys_filter_input.split("").join("(.{0,4})").replace(" ","(.{0,8})"));
+    let reg = RegExp(zys_filter_input.split("").join("(.{0,4})"));
 
-    let filterlist = _zys.filter((v)=> reg.test(v)).filter((_,i)=>i<250);
+    let filterlist = _zys.filter((v)=> reg.test(v)).filter((_,i)=>i<max);
     zys.innerHTML = filterlist.map((v)=> `<li class="zyli">${v}</li>`).join("");
 
-    if(!hidden_in.checked&&filterlist.length<120){
-        zys.innerHTML += xxzy["any"].zy.map((v)=> `<li class="zyli">${v}</li>`).join("");
+    if(!hidden_in.checked&&filterlist.length+10<max){
+        let anylist = xxzy["any"].zy.filter((v)=> reg.test(v)).filter((_,i)=>i<(max-filterlist.length));
+        zys.innerHTML += anylist.map((v)=> `<li class="zyli">${v}</li>`).join("");
     }
 }
 

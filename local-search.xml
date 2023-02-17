@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>高中模拟选课工具_高考选科分班_志愿填报工具_2024大学高校专业选课要求</title>
+    <link href="/posts/2023/6de6/"/>
+    <url>/posts/2023/6de6/</url>
+    
+    <content type="html"><![CDATA[<p>高中模拟选课工具_高考选科分班_志愿填报工具_2024大学高校专业选课要求_查看具体数量及百分比_请选物化生喵~  </p><p>数据来自教研院官网-适用于2024年及之后高考的学生<br>本网站特地排除了要求为大专的专业, 因此可能与某些教育机构提供的数据存在差异  </p>    <a scr="https://yuhanawa.github.io/tools/xk/"> 如果没有自动跳转请点击手动跳转>https://yuhanawa.github.io/tools/xk/ </a>    <script> window.location.href = 'https://yuhanawa.github.io/tools/xk/'; </script>    <p>选科<br>物理 化学 生物 政治 历史 地理</p><p>概要<br>可选专业数: 0 + 1286(不限)<br>可选的数: 0 + 17034(不限)<br>专业院校覆盖率 0.0%  </p><p>以下是您可以报考的专业及学校<br>为防止卡顿最大显示320项,详情请使用筛选功能<br>隐藏不限科的专业及大学:   </p><p>输入大学或专业进行筛选:  </p><p>搜索支持模糊搜索(例如:山大&#x3D;&gt;山东大学)</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>网站</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>工具</tag>
+      
+      <tag>网站</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>LALRPOP 学习手册/教程/文档-中文翻译 | LALRPOP Tutorial</title>
     <link href="/posts/2023/57877/"/>
     <url>/posts/2023/57877/</url>
@@ -35,11 +62,11 @@
   
   
   <entry>
-    <title>LALRPOP 高级设置 手册/教程-中文翻译 | LALRPOP Advanced setup</title>
-    <link href="/posts/2023/21239/"/>
-    <url>/posts/2023/21239/</url>
+    <title>LALRPOP 快速开始 导航/手册/教程-中文翻译 | LALRPOP Quick start guide</title>
+    <link href="/posts/2023/17808/"/>
+    <url>/posts/2023/17808/</url>
     
-    <content type="html"><![CDATA[<p>🌸 樱花开头的内容为译者添加<br>🌸 翻译自 <a href="http://lalrpop.github.io/lalrpop/index.html">LALRPOP 教程 | 高级设置 | Advanced setup</a><br>🌸 导航: <strong><a href="https://yuhanawa.github.io/posts/2023/TODO/">&lt;&lt;[上篇-未完成]</a> - <a href="https://yuhanawa.github.io/posts/2023/11467/">[目录]</a> - <a href="https://yuhanawa.github.io/posts/2023/21239/">[下篇-这是最后一篇]&gt;&gt;</a></strong></p><h2 id="高级设置-Advanced-setup"><a href="#高级设置-Advanced-setup" class="headerlink" title="高级设置|Advanced setup"></a>高级设置|Advanced setup</h2><p>当你设置 LALRPOP 时, 你创建了一个 <code>build.rs</code> 文件, 看起来像这样:</p><div class="code-wrapper"><pre class="line-numbers language-rust" data-language="rust"><code class="language-rust">extern crate lalrpop;fn main() &#123;    lalrpop::process_root().unwrap();&#125;</code></pre></div><p>这个 <code>process_root()</code> 调用只是使用了默认的配置. 所以它会在*当前路径(in-place)*（在你的<code>src</code>目录下）下把<code>.lalrpop</code>文件转化为<code>.rs</code>文件. 而且只有在 <code>.lalrpop</code> 文件发生改变时才会进行. 但是你也可以使用<a href="https://docs.rs/lalrpop/*/lalrpop/struct.Configuration.html"><code>Configuration</code></a> 结构来获得更精确(detailed)的控制. </p><p>比如, 想要<strong>强制</strong>在输出中使用颜色（忽略TTY设置）, 你这样修改你的<code>build.rs</code>. </p><div class="code-wrapper"><pre class="line-numbers language-rust" data-language="rust"><code class="language-rust">extern crate lalrpop;fn main() &#123;    lalrpop::Configuration::new()        .always_use_colors()  &#x2F;&#x2F; 🌸 添加这行        .process_current_dir();&#125;</code></pre></div><md id="generate_in_source">  <h3 id="在源代码树中生成-Generate-in-source-tree"><a href="#在源代码树中生成-Generate-in-source-tree" class="headerlink" title="在源代码树中生成|Generate in source tree"></a>在源代码树中生成|Generate in source tree</h3><p>🌸 <a href="http://lalrpop.github.io/lalrpop/generate_in_source.html">原文</a>为单独一页 现在将其整合为一页</p><p>在0.15版本以前, LALRPOP 是在输入文件的同一目录下生成文件. 从0.16开始, 文件生成在Cargo的<strong>输出目录</strong>. </p><p>如果你想保持以前的习惯, 你可以调用<code>generate_in_source_tree</code>.<br>在你的配置中:</p><div class="code-wrapper"><pre class="line-numbers language-rust" data-language="rust"><code class="language-rust">extern crate lalrpop;fn main() &#123;    lalrpop::Configuration::new()        .generate_in_source_tree() &#x2F;&#x2F;🌸 添加这行        .process();&#125;</code></pre></div><p>对于每一个 <code>foo.lalrpop</code> 文件, 你可以简单地在你的源代码树中设置<code>mod foo;</code>. <code>lalrpop_mod</code>宏在这种模式下不是很有用. </p></md>]]></content>
+    <content type="html"><![CDATA[<p>🌸 樱花开头的内容为译者添加<br>🌸 翻译自 <a href="http://lalrpop.github.io/lalrpop/index.html">LALRPOP 教程 | 快速开始 | Quick start guide</a><br>🌸 导航: <strong><a href="https://yuhanawa.github.io/posts/2023/51562/">&lt;&lt;[上篇-基础速成]</a> - <a href="https://yuhanawa.github.io/posts/2023/11467/">[目录]</a> - <a href="https://yuhanawa.github.io/posts/2023/17808/">[下篇-未完成]&gt;&gt;</a></strong></p><h2 id="快速开始-Quick-start"><a href="#快速开始-Quick-start" class="headerlink" title="快速开始 | Quick start"></a>快速开始 | Quick start</h2><p>要开始使用 LALRPOP, 最好是阅读<a href="tutorial/index.md">教程</a>, 它将向你介绍 LALRPOP 文件的语法, 等等.<br>但是如果你以前做过这个, 或者你是那种<em>没有耐心</em>的人.这里有一个快速的 “小抄”, 用于设置你的项目. 首先, 添加以下几行到你的 <code>Cargo.toml</code>:</p><div class="code-wrapper"><pre class="line-numbers language-toml" data-language="toml"><code class="language-toml">[package]...build &#x3D; &quot;build.rs&quot; # LALRPOP preprocessing# 生成的代码依赖于 lalrpop-util.# # 生成的标志器依赖于 regex crate.# # (如果你写了自己的标记器,或者已经有了 regex crate，你可以跳过这个依赖)[dependencies]lalrpop-util &#x3D; &quot;0.19.8&quot;regex &#x3D; &quot;1&quot;# 添加构建时的 lalrpop 依赖:[build-dependencies]lalrpop &#x3D; &quot;0.19.8&quot;# 如果你提供你自己的外部 lexer，你可以通过禁用 default-features 来使其不包括内置 lexer 功能。# lalrpop &#x3D; &#123; version &#x3D; &quot;0.19.1&quot;, default-features &#x3D; false &#125;</code></pre></div><p>接下来创建一个 <a href="https://doc.rust-lang.org/cargo/reference/build-scripts.html"><code>build.rs</code></a> 文件, 看起来像这样:</p><div class="code-wrapper"><pre class="line-numbers language-rust" data-language="rust"><code class="language-rust">extern crate lalrpop;fn main() &#123;    lalrpop::process_root().unwrap();&#125;</code></pre></div><p>(如果你已经有一个<code>build.rs</code>文件了, 无论该文件在做什么, 你可以直接调用<code>process_root</code>)</p><p>这就行了, 注意<code>process_root</code>只是使用默认设置.<br>如果你想配置 LALRPOP 的执行方式, 请看 <a href="/posts/2023/21239/">高级设置|Advanced setup</a>.  </p><h3 id="手动运行"><a href="#手动运行" class="headerlink" title="手动运行"></a>手动运行</h3><p>如果你愿意, 你也可以将 “lalrpop “crate作为一个可执行文件.只需运行<code>cargo install lalrpop</code>, 然后你就会得到一个可执行的二进制文件, 像这样:</p><div class="code-wrapper"><pre class="line-numbers language-APPLESCRIPT" data-language="APPLESCRIPT"><code class="language-APPLESCRIPT">lalrpop file.lalrpop</code></pre></div><p>这将为你生成<code>file.rs</code>.注意, 它只在<code>file.lalrpop</code>比<code>file.rs</code>新的情况下执行<br>如果你想无条件地执行, 请传递参数<code>-f</code>（也可以尝试<code>--help</code>以获得其他选项）.</p>]]></content>
     
     
     <categories>
@@ -66,11 +93,11 @@
   
   
   <entry>
-    <title>LALRPOP 快速开始 导航/手册/教程-中文翻译 | LALRPOP Quick start guide</title>
-    <link href="/posts/2023/17808/"/>
-    <url>/posts/2023/17808/</url>
+    <title>LALRPOP 高级设置 手册/教程-中文翻译 | LALRPOP Advanced setup</title>
+    <link href="/posts/2023/21239/"/>
+    <url>/posts/2023/21239/</url>
     
-    <content type="html"><![CDATA[<p>🌸 樱花开头的内容为译者添加<br>🌸 翻译自 <a href="http://lalrpop.github.io/lalrpop/index.html">LALRPOP 教程 | 快速开始 | Quick start guide</a><br>🌸 导航: <strong><a href="https://yuhanawa.github.io/posts/2023/51562/">&lt;&lt;[上篇-基础速成]</a> - <a href="https://yuhanawa.github.io/posts/2023/11467/">[目录]</a> - <a href="https://yuhanawa.github.io/posts/2023/17808/">[下篇-未完成]&gt;&gt;</a></strong></p><h2 id="快速开始-Quick-start"><a href="#快速开始-Quick-start" class="headerlink" title="快速开始 | Quick start"></a>快速开始 | Quick start</h2><p>要开始使用 LALRPOP, 最好是阅读<a href="tutorial/index.md">教程</a>, 它将向你介绍 LALRPOP 文件的语法, 等等.<br>但是如果你以前做过这个, 或者你是那种<em>没有耐心</em>的人.这里有一个快速的 “小抄”, 用于设置你的项目. 首先, 添加以下几行到你的 <code>Cargo.toml</code>:</p><div class="code-wrapper"><pre class="line-numbers language-toml" data-language="toml"><code class="language-toml">[package]...build &#x3D; &quot;build.rs&quot; # LALRPOP preprocessing# 生成的代码依赖于 lalrpop-util.# # 生成的标志器依赖于 regex crate.# # (如果你写了自己的标记器,或者已经有了 regex crate，你可以跳过这个依赖)[dependencies]lalrpop-util &#x3D; &quot;0.19.8&quot;regex &#x3D; &quot;1&quot;# 添加构建时的 lalrpop 依赖:[build-dependencies]lalrpop &#x3D; &quot;0.19.8&quot;# 如果你提供你自己的外部 lexer，你可以通过禁用 default-features 来使其不包括内置 lexer 功能。# lalrpop &#x3D; &#123; version &#x3D; &quot;0.19.1&quot;, default-features &#x3D; false &#125;</code></pre></div><p>接下来创建一个 <a href="https://doc.rust-lang.org/cargo/reference/build-scripts.html"><code>build.rs</code></a> 文件, 看起来像这样:</p><div class="code-wrapper"><pre class="line-numbers language-rust" data-language="rust"><code class="language-rust">extern crate lalrpop;fn main() &#123;    lalrpop::process_root().unwrap();&#125;</code></pre></div><p>(如果你已经有一个<code>build.rs</code>文件了, 无论该文件在做什么, 你可以直接调用<code>process_root</code>)</p><p>这就行了, 注意<code>process_root</code>只是使用默认设置.<br>如果你想配置 LALRPOP 的执行方式, 请看 <a href="/posts/2023/21239/">高级设置|Advanced setup</a>.  </p><h3 id="手动运行"><a href="#手动运行" class="headerlink" title="手动运行"></a>手动运行</h3><p>如果你愿意, 你也可以将 “lalrpop “crate作为一个可执行文件.只需运行<code>cargo install lalrpop</code>, 然后你就会得到一个可执行的二进制文件, 像这样:</p><div class="code-wrapper"><pre class="line-numbers language-APPLESCRIPT" data-language="APPLESCRIPT"><code class="language-APPLESCRIPT">lalrpop file.lalrpop</code></pre></div><p>这将为你生成<code>file.rs</code>.注意, 它只在<code>file.lalrpop</code>比<code>file.rs</code>新的情况下执行<br>如果你想无条件地执行, 请传递参数<code>-f</code>（也可以尝试<code>--help</code>以获得其他选项）.</p>]]></content>
+    <content type="html"><![CDATA[<p>🌸 樱花开头的内容为译者添加<br>🌸 翻译自 <a href="http://lalrpop.github.io/lalrpop/index.html">LALRPOP 教程 | 高级设置 | Advanced setup</a><br>🌸 导航: <strong><a href="https://yuhanawa.github.io/posts/2023/TODO/">&lt;&lt;[上篇-未完成]</a> - <a href="https://yuhanawa.github.io/posts/2023/11467/">[目录]</a> - <a href="https://yuhanawa.github.io/posts/2023/21239/">[下篇-这是最后一篇]&gt;&gt;</a></strong></p><h2 id="高级设置-Advanced-setup"><a href="#高级设置-Advanced-setup" class="headerlink" title="高级设置|Advanced setup"></a>高级设置|Advanced setup</h2><p>当你设置 LALRPOP 时, 你创建了一个 <code>build.rs</code> 文件, 看起来像这样:</p><div class="code-wrapper"><pre class="line-numbers language-rust" data-language="rust"><code class="language-rust">extern crate lalrpop;fn main() &#123;    lalrpop::process_root().unwrap();&#125;</code></pre></div><p>这个 <code>process_root()</code> 调用只是使用了默认的配置. 所以它会在*当前路径(in-place)*（在你的<code>src</code>目录下）下把<code>.lalrpop</code>文件转化为<code>.rs</code>文件. 而且只有在 <code>.lalrpop</code> 文件发生改变时才会进行. 但是你也可以使用<a href="https://docs.rs/lalrpop/*/lalrpop/struct.Configuration.html"><code>Configuration</code></a> 结构来获得更精确(detailed)的控制. </p><p>比如, 想要<strong>强制</strong>在输出中使用颜色（忽略TTY设置）, 你这样修改你的<code>build.rs</code>. </p><div class="code-wrapper"><pre class="line-numbers language-rust" data-language="rust"><code class="language-rust">extern crate lalrpop;fn main() &#123;    lalrpop::Configuration::new()        .always_use_colors()  &#x2F;&#x2F; 🌸 添加这行        .process_current_dir();&#125;</code></pre></div><md id="generate_in_source">  <h3 id="在源代码树中生成-Generate-in-source-tree"><a href="#在源代码树中生成-Generate-in-source-tree" class="headerlink" title="在源代码树中生成|Generate in source tree"></a>在源代码树中生成|Generate in source tree</h3><p>🌸 <a href="http://lalrpop.github.io/lalrpop/generate_in_source.html">原文</a>为单独一页 现在将其整合为一页</p><p>在0.15版本以前, LALRPOP 是在输入文件的同一目录下生成文件. 从0.16开始, 文件生成在Cargo的<strong>输出目录</strong>. </p><p>如果你想保持以前的习惯, 你可以调用<code>generate_in_source_tree</code>.<br>在你的配置中:</p><div class="code-wrapper"><pre class="line-numbers language-rust" data-language="rust"><code class="language-rust">extern crate lalrpop;fn main() &#123;    lalrpop::Configuration::new()        .generate_in_source_tree() &#x2F;&#x2F;🌸 添加这行        .process();&#125;</code></pre></div><p>对于每一个 <code>foo.lalrpop</code> 文件, 你可以简单地在你的源代码树中设置<code>mod foo;</code>. <code>lalrpop_mod</code>宏在这种模式下不是很有用. </p></md>]]></content>
     
     
     <categories>
