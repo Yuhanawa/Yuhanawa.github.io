@@ -9,9 +9,7 @@ Allow: /links/
 Allow: /posts/
 Allow: /css/
 Allow: /img/
+Allow: /tools/
 
-Disallow: /js/
-Disallow: /fonts/
-Disallow: /tools/
-
-Sitemap: https://yuhanawa.github.io/sitemap.xml
+Sitemap: http://yuhanawa.github.io/sitemap.xml
+Sitemap: https://yuhanawa.github.io/sitemap_https.xml
