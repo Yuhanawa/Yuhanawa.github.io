@@ -65,7 +65,7 @@ const summary = () => {
 
 
 
-    percent.innerText = (_xxzysum / 38411 * 100).toFixed(1).toString() + "%";
+    percent.innerText = ((_xxzysum+17034) / 38411 * 100).toFixed(1).toString() + "%";
     xxzysum.innerText = _xxzysum;
     zysum.innerText = _zysum;
     zys_filter();
