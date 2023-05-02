@@ -1,9 +1,11 @@
 User-agent: *
 
+Disallow: /tags/
+Disallow: /posts/34068/
+
 Allow: /
 Allow: /archives/
 Allow: /categories/
-Allow: /tags/
 Allow: /about/
 Allow: /links/
 Allow: /posts/
