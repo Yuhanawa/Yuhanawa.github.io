@@ -1,7 +1,6 @@
 User-agent: *
 
 Disallow: /tags/
-Disallow: /posts/34068/
 
 Allow: /
 Allow: /archives/

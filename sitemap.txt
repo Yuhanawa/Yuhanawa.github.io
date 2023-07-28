@@ -3,7 +3,6 @@ http://yuhanawa.github.io/posts/2023/21239/
 http://yuhanawa.github.io/posts/2023/11467/
 http://yuhanawa.github.io/posts/2023/17808/
 http://yuhanawa.github.io/posts/2023/51562/
-http://yuhanawa.github.io/posts/2022/34068/
 http://yuhanawa.github.io/about/index.html
 http://yuhanawa.github.io/posts/2023/82b5/
 http://yuhanawa.github.io/posts/2023/6de6/
@@ -24,8 +23,8 @@ http://yuhanawa.github.io/tags/%E6%95%99%E7%A8%8B/
 http://yuhanawa.github.io/tags/Nostr/
 http://yuhanawa.github.io/tags/web3/
 http://yuhanawa.github.io/tags/%E5%8E%BB%E4%B8%AD%E5%BF%83%E5%8C%96/
-http://yuhanawa.github.io/categories/test/
 http://yuhanawa.github.io/categories/%E7%BD%91%E7%AB%99/
+http://yuhanawa.github.io/categories/test/
 http://yuhanawa.github.io/categories/%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E4%B8%AD/
 http://yuhanawa.github.io/categories/LALRPOP/
 http://yuhanawa.github.io/categories/web3/
