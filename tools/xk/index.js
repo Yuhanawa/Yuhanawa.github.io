@@ -125,7 +125,6 @@ Array.prototype.remove = function (val) {
 
 // from web
 
-watermark()
 function watermark() {
     //默认设置
     const defaultSettings = {
