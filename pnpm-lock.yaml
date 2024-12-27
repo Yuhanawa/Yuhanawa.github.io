@@ -15,8 +15,8 @@ importers:
         specifier: ^5.1.1
         version: 5.1.1(@types/node@22.10.2)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.28.1)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1)
       astro-charm:
-        specifier: ^1.0.1
-        version: 1.0.1(astro@5.1.1(@types/node@22.10.2)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.28.1)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1))(typescript@5.7.2)
+        specifier: ^1.0.2
+        version: 1.0.2(astro@5.1.1(@types/node@22.10.2)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.28.1)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1))(typescript@5.7.2)
       sharp:
         specifier: ^0.33.5
         version: 0.33.5
@@ -989,8 +989,8 @@ packages:
     resolution: {integrity: sha512-6t10qk83GOG8p0vKmaCr8eiilZwO171AvbROMtvvNiwrTly62t+7XkA8RdIIVbpMhCASAsxgAzdRSwh6nw/5Dg==}
     engines: {node: '>=4'}
 
-  astro-charm@1.0.1:
-    resolution: {integrity: sha512-vefrc+QU/IsnDgS01B9FasdMN9aZNZL1tCNxIPh+Jc0faJeCzvQbU4YfEEhDgn8PYr7ZMwjezUyQMLKAqxAEwg==}
+  astro-charm@1.0.2:
+    resolution: {integrity: sha512-+gWt8+OIJXO7cvddPsn4ecQMQwInIRmlhVqqFrZp8rg86NBZndZdbGWFgRfTasrnXY4GtnAVrCjAedqXolHRtA==}
 
   astro-icon@1.1.4:
     resolution: {integrity: sha512-sMLkQaevIQLv38WBzb/RDbsmxhg5+X+KcNmpTi9cE6MLurNWU1MPnlO87d9Vwg4HxTenKpDlYp81A3syXFW/gw==}
@@ -3843,7 +3843,7 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
-  astro-charm@1.0.1(astro@5.1.1(@types/node@22.10.2)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.28.1)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1))(typescript@5.7.2):
+  astro-charm@1.0.2(astro@5.1.1(@types/node@22.10.2)(jiti@2.4.2)(lightningcss@1.27.0)(rollup@4.28.1)(terser@5.36.0)(typescript@5.7.2)(yaml@2.6.1))(typescript@5.7.2):
     dependencies:
       '@astrojs/rss': 4.0.10
       '@astrojs/sitemap': 3.2.1

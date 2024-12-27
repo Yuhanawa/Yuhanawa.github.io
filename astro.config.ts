@@ -16,8 +16,8 @@ export default defineConfig({
         author: "Yuhanawa",
         side: {
           title: "Yuhanawa",
-          sub: "Hello, I'm here",
-          bio: "Just making fun",
+          sub: "Hello,",
+          bio: " I'm here",
           navHome: {
             title: "Home",
           },
