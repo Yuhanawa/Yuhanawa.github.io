@@ -1,0 +1,5 @@
+User-agent: *
+
+Allow: /
+
+Sitemap: http://yuhanawa.github.io/sitemap-index.xml
