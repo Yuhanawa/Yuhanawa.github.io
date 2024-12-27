@@ -1,6 +1,6 @@
 ---
 title: LALRPOP 快速开始 文档/教程-中文翻译 | LALRPOP Quick start guide
-categories: LALRPOP文档翻译
+category: LALRPOP文档翻译
 tags:
   - LALRPOP
   - Rust

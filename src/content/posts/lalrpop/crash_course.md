@@ -1,6 +1,6 @@
 ---
 title: LALRPOP 解析器基础速成 文档/教程-中文翻译 | LALRPOP Crash course on parsers
-categories: LALRPOP文档翻译
+category: LALRPOP文档翻译
 tags:
   - LALRPOP
   - Rust

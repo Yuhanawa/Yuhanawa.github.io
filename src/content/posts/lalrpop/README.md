@@ -1,6 +1,6 @@
 ---
 title: LALRPOP 目录&介绍 文档/教程-中文翻译 | LALRPOP Readme Summary
-categories: LALRPOP文档翻译
+category: LALRPOP文档翻译
 tags:
   - LALRPOP
   - Rust

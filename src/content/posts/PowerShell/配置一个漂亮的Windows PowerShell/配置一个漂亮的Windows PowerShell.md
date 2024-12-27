@@ -7,6 +7,7 @@ tags:
   - 配置
 slug: "39178"
 published: 2021-10-30 14:11:49
+category: powerShell
 ---
 
 <!-- ## 完成效果 -->

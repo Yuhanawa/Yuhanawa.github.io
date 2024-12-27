@@ -1,6 +1,6 @@
 ---
 title: LALRPOP Tutorial 教程/文档-中文翻译 | LALRPOP Tutorial Chinese Book | LALRPOP是Rust写的解析器生成器
-categories: LALRPOP文档翻译
+category: LALRPOP文档翻译
 tags:
   - LALRPOP
   - Rust
