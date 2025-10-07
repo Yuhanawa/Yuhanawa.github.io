@@ -1,7 +1,7 @@
 {
   "name": "yuhanawa.github.io",
   "type": "module",
-  "version": "0.0.1",
+  "private": true,
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -10,11 +10,7 @@
   },
   "dependencies": {
     "astro": "^5.14.1",
-    "astro-charm": "^1.2.4",
+    "astro-charm": "^1.4.2",
     "sharp": "^0.34.4"
-  },
-  "devDependencies": {
-    "@iconify-json/simple-icons": "^1.2.53",
-    "@iconify-json/solar": "^1.2.4"
   }
 }
