@@ -12,8 +12,8 @@ importers:
         specifier: ^5.15.9
         version: 5.15.9(@types/node@24.10.1)(rollup@4.53.2)(typescript@5.9.2)(yaml@2.8.1)
       astro-charm:
-        specifier: ^1.4.6
-        version: 1.4.6(@iconify-json/simple-icons@1.2.53)(@iconify-json/solar@1.2.4)(astro@5.15.9(@types/node@24.10.1)(rollup@4.53.2)(typescript@5.9.2)(yaml@2.8.1))(prettier@3.6.2)(typescript@5.9.2)
+        specifier: ^1.4.7
+        version: 1.4.7(@iconify-json/simple-icons@1.2.53)(@iconify-json/solar@1.2.4)(astro@5.15.9(@types/node@24.10.1)(rollup@4.53.2)(typescript@5.9.2)(yaml@2.8.1))(prettier@3.6.2)(typescript@5.9.2)
       sharp:
         specifier: ^0.34.5
         version: 0.34.5
@@ -868,8 +868,8 @@ packages:
     resolution: {integrity: sha512-6t10qk83GOG8p0vKmaCr8eiilZwO171AvbROMtvvNiwrTly62t+7XkA8RdIIVbpMhCASAsxgAzdRSwh6nw/5Dg==}
     engines: {node: '>=4'}
 
-  astro-charm@1.4.6:
-    resolution: {integrity: sha512-+Iah/Pk8Vsja2BdqoeybkCZ4vIsewA0Phy8t7lxXM6DIRvGiko1CQojJo34mKapMB7vhLzRBtAh3uY/+4tu2lA==}
+  astro-charm@1.4.7:
+    resolution: {integrity: sha512-L8mAeThjHlqje3dErPtL1VZS+1iPApPrw4nF0pRjL/iNvuV8FoTwVP2PPdu501k9yFrHOBX3xBCbUmIxGvaknw==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       '@iconify-json/simple-icons': ^1.2.0
@@ -3285,7 +3285,7 @@ snapshots:
 
   '@types/sax@1.2.7':
     dependencies:
-      '@types/node': 17.0.45
+      '@types/node': 24.10.1
 
   '@types/tar@6.1.13':
     dependencies:
@@ -3406,7 +3406,7 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
-  astro-charm@1.4.6(@iconify-json/simple-icons@1.2.53)(@iconify-json/solar@1.2.4)(astro@5.15.9(@types/node@24.10.1)(rollup@4.53.2)(typescript@5.9.2)(yaml@2.8.1))(prettier@3.6.2)(typescript@5.9.2):
+  astro-charm@1.4.7(@iconify-json/simple-icons@1.2.53)(@iconify-json/solar@1.2.4)(astro@5.15.9(@types/node@24.10.1)(rollup@4.53.2)(typescript@5.9.2)(yaml@2.8.1))(prettier@3.6.2)(typescript@5.9.2):
     dependencies:
       '@astrojs/rss': 4.0.13
       '@astrojs/sitemap': 3.6.0
