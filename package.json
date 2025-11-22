@@ -1,21 +1,21 @@
 {
-  "name": "yuhanawa.github.io",
-  "type": "module",
-  "private": true,
-  "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "check": "biome check --write"
-  },
-  "dependencies": {
-    "astro": "^5.15.9",
-    "astro-charm": "^1.4.7",
-    "lit": "^3.3.1",
-    "sharp": "^0.34.5",
-    "simplex-noise": "^4.0.3"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "2.3.6"
-  }
+	"name": "yuhanawa.github.io",
+	"type": "module",
+	"private": true,
+	"scripts": {
+		"dev": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"check": "biome check --write"
+	},
+	"dependencies": {
+		"astro": "^5.15.9",
+		"astro-charm": "^1.4.7",
+		"lit": "^3.3.1",
+		"sharp": "^0.34.5",
+		"simplex-noise": "^4.0.3"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.3.6"
+	}
 }
