@@ -1,0 +1,16 @@
+---
+
+---
+<script>
+    import "../components/sakura-trail.lit";
+    const addSakuraTrail = () => {
+        const sakuraTrail = document.createElement("sakura-trail");
+        sakuraTrail.maxPetalCount = 200;
+        sakuraTrail.maxPetalCountOnceDraw = 1;
+        sakuraTrail.baseConfig={opacity: 0.5,maxLife:50}
+        document.body.appendChild(sakuraTrail);
+    }
+
+    addSakuraTrail();
+    document.addEventListener("astro:after-swap", addSakuraTrail);
+</script>

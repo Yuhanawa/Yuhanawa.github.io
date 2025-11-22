@@ -1,5 +1,8 @@
+import path from "node:path";
 import { defineConfig } from "astro/config";
 import charm from "astro-charm";
+
+const dirName = path.dirname(new URL(import.meta.url).pathname);
 
 // https://astro.build/config
 export default defineConfig({
@@ -36,11 +39,8 @@ export default defineConfig({
 			},
 			pages: {},
 			overrides: {
-				components: {
-					// you can add custom script by overriding CustomScriptComponent,
-					// it will be added to the end of `<head>`.
-					// example:
-					// CustomScriptComponent: "./src/components/CustomScriptComponent.astro",
+				custom: {
+					CustomScriptComponent: `${dirName}/src/components/CustomScriptComponent.astro`,
 				},
 			},
 		}),
